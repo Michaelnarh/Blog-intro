@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webteam posts</title>
+    <link href="stylesheet" type="text/css" >
+    
+    <style type="text/css">
+    
+    	.homepage{
+    		display: flex;;
+
+
+    	}
+    a{
+    		width:25px;
+    		height: 10px;
+    		background-color:blue;
+    		text-decoration: none;
+    		color:white;
+    		padding: 4px 4px;
+    		justify-content: flex-end;
+    	}
+    	nav{
+    		width:200px;
+    		height:350px;
+    		color:white;
+    		background-color: blue;
+    		border: 1px green solid;
+    		border-radius: 10px;
+    		padding: 4px 4px;
+    		margin:5px;
+
+
+
+    	}
+    	.inner{
+    		display: flex;
+    		flex-wrap: wrap;
+    		flex: 1 1 0;
+    		justify-content: space-around;
+    		box-sizing: border-box;
+            background-color: turquoise;
+    	}
+    	.comments{
+    		display: block;
+
+    	}
+    	.comments textarea{
+    		width: 400px;
+    		height:200px
+
+    	}
+
+   
+
+    	
+    </style>   
+</head>
+
+<body>
+	<div class="homepage">
+		<div class="comments">
+         
+	       <input> Title</input>
+	       <label><a href="#"> ADD</a> </label> 
+	       <textarea type="text">
+	       	    Post comment
+	       </textarea>
+	     <label><a href="#"> SUMMIT</a> </label>     
+    </div>
+
+    <div class="inner">
+
+    	<nav class="1">
+    		<h2> Hi woossop</h2> 
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident,
+    	</nav>
+    	<nav class="2">
+    		<h2> hello sup</h2>
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident,
+    	</nav>
+    	<nav class="3">
+    		<h2> Hi woossop</h2> 
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident,
+    	</nav>
+    	<nav class="4">
+    		<h2> hello sup</h2>
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident,
+    	</nav>
+    </div>
+		
+	</div>
+
+    
+</body>
+</html>
