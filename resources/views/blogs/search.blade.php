@@ -9,7 +9,7 @@
     @include('_partials.securedelete')
     <table class="table">
         <div class="row">
-            <thead>All Blogs</thead>
+            <thead>Searched Name</thead>
         </div>
         <tr>
             <th class="mr-2"> #</th>
