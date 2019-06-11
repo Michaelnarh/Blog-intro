@@ -48,18 +48,18 @@
                                 <th class="row">
                                         <div class="mr-1">
                                                 {!! Form::open(["route"=>["blogs.show","$blog->id"],"method"=>"GET"])!!}
-                                                {{Form:: submit('Show',["class"=>"btn btn-primary"])}}
+                                                {{Form:: submit('Show',["class"=>"btn btn-primary fas"])}}
                                                 {!! Form::close()!!}
                                         </div>
                                         <div class="mr-1">
                                                 {!! Form::open(["route"=>["blogs.edit","$blog->id"],"method"=>"GET"])!!}
-                                                {{Form:: submit('Edit',["class"=>"btn btn-warning"])}}
+                                                {{Form:: submit('Edit',["class"=>"btn btn-warning fas"])}}
                                                 {!! Form::close()!!}
                                         </div>
                                         <div class="mr-1">
                                                 {!!
                                                 Form::open(["route"=>["blogs.destroy","$blog->id"],"method"=>"DELETE"])!!}
-                                                {{Form:: submit('Delete',["class"=>"btn btn-danger delete"])}}
+                                                {{Form:: submit('Delete',["class"=>"btn btn-danger delete fas fa-eye"])}}
                                                 {!! Form::close()!!}
                                         </div>
 
