@@ -8,10 +8,10 @@
 <div class="container">
         @include('_partials.securedelete')
         <table class="table">
-                <div class="d-inline-flex">
-                        <ul>All Blogs</ul>
+                <div class="d-inline-flex ">
+                        <ul class="mr-5">All Blogs</ul>
                         <ul>
-                                <div class="justify-content-end">
+                                <div class="ml-5 justify-content-end">
                                         {!! Form::open(["route"=>"blogs.search", "method"=>'GET'])!!}
                                         <div class="row">
                                                 <ul>
@@ -59,7 +59,7 @@
                                         <div class="mr-1">
                                                 {!!
                                                 Form::open(["route"=>["blogs.destroy","$blog->id"],"method"=>"DELETE"])!!}
-                                                {{Form:: submit('Delete',["class"=>"btn btn-danger delete fas fa-eye"])}}
+                                                {{Form:: submit('Delete',["class"=>"btn btn-danger delete fas"])}}
                                                 {!! Form::close()!!}
                                         </div>
 

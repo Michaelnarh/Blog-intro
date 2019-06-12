@@ -3,8 +3,9 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MTN-Linkork @yield("title","")</title>
+	<link rel="shortcut icon" href="{{asset("desing_img/clogo.jpg")}}">
+	<meta http-equiv=" X-UA-Compatible" content="IE=edge">
+	<title>MTN-Linkok @yield("title","")</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 	<script src="main.js"></script>
@@ -27,23 +28,23 @@
 			<div class="collapse navbar-collapse d-center" id="navbarCollapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a href="{{route('mainPages.about')}}" class="nav-link {{Request::is("about")? "myactive":""}}"
+						<a href="{{route('mainPages.about')}}" class="nav-link {{Request::is("about")? "active":""}}"
 							id="about">about</a>
 					</li>
 					<li class="nav-item" id="blog">
-						<a href="{{route('mainPages.blog')}}" class="nav-link {{Request::is("blog")? "myactive":""}}"">blog</a>
+						<a href="{{route('mainPages.blog')}}" class="nav-link {{Request::is("blog")? "active":""}}"">blog</a>
                    </li>
                    <li class =" nav-item">
 							<a href="{{route("mainPages.contact")}}"
-								class="nav-link {{Request::is("contact")? "myactive":""}}"" id=" contact">contact</a>
+								class="nav-link {{Request::is("contact")? "active":""}}"" id=" contact">contact</a>
 					</li>
 					<li class="nav-item">
 						<a href="{{route("mainPages.share")}}"
-							class="nav-link {{Request::is("share")? "myactive":""}}"" id=" share">share</a>
+							class="nav-link {{Request::is("share")? "active":""}}"" id=" share">share</a>
 					</li>
 					<li class="nav-item">
 						<a href="{{route("mainPages.support")}}"
-							class="nav-link {{Request::is("support")? "myactive":""}}"" id=" support">support</a>
+							class="nav-link {{Request::is("support")? "active":""}}"" id=" support">support</a>
 					</li>
 				</ul>
 			</div>
@@ -126,16 +127,16 @@
 				</div>
 				<div class="col-lg-3  col-md-6 col-sm-6">
 					<div class="single-footer-widget mail-chimp">
-						<h6 class="mb-20">Instafeed</h6>
+						<h6 class="mb-20">Instagram Feed</h6>
 						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
-							<li><img src="images/Image-03.jpg" alt=""></li>
+							<li><img src="{{asset("design_img/Image-01.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-02.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-03.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-04.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-05.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-06.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-07.jpg")}}" alt=""></li>
+							<li><img src="{{asset("design_img/Image-08.jpg")}}" alt=""></li>
 						</ul>
 					</div>
 				</div>
@@ -146,8 +147,10 @@
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;<script>
 							document.write(new Date().getFullYear());
-						</script> All rights reserved | This template is made with <i class="fab fa-heart-o"
-							aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						</script> All rights reserved | This i made with love <i class="fab fa-heart-o"
+							aria-hidden="true"></i> by <a href="{{route("mainPages.blog")}}" target="_blank">MTN-Linkok
+							inc
+							&reg</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 				</div>

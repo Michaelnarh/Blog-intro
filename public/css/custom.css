@@ -3,7 +3,6 @@
     -moz-animation: cubic-bezier(0.075, 0.82, 0.165, 1);
     --mainBlue: rgba(12, 24, 194);
     --mainOrange: rgb(224, 77, 9);
-
 }
 
 a:hover {
@@ -12,12 +11,21 @@ a:hover {
 
 .myactive {
     color: var(--mainWhite);
-    background-color: var(--mainOrange)
+    background-color: var(--mainOrange);
+}
+
+.active {
+    background-color: var(--mainOrange);
+}
+.card {
+    box-shadow: rgba(13, 34, 12, 0.85);
+    overflow: hidden;
 }
 
 .footer-area {
     min-height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/images/footer-bg.jpg) no-repeat center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        url(/images/footer-bg.jpg) no-repeat center;
     background-size: cover;
 }
 

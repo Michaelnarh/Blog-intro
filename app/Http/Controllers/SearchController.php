@@ -12,6 +12,7 @@ class SearchController extends Controller
     {
         $word_search = $request->search;
         $blogs = Blog::all();
+        $search_blogs;
         foreach($blogs as $blog)
          {
              $var=0;
@@ -23,12 +24,16 @@ class SearchController extends Controller
 
                 //     //  $arr[$var] =$blog;
                 //  }
-                Session::flash("success","name found");
+                  return $blog;
+            }
+            
+            $var++;
+        }
+        
+        return $blog::all();
 
-                 return view("blogs.search")->withBlog($blog);
-             }
-           $var++;
-         }
+        Session::flash("success","name found");
+        return view("blogs.search")->withBlog($search_blogs);
     }
     
     // else{

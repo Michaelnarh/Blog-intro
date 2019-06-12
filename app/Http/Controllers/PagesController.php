@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Blog;
 class PagesController extends Controller
 {
     //
@@ -17,7 +17,8 @@ class PagesController extends Controller
     
     public function Blogpage(){
         
-        return view('mainPages.blog');
+        $blogs=Blog::orderBy("created_at","desc")->paginate(6);
+        return view('mainPages.blog',compact("blogs"));
     }
     public function Blogdetailpage(){
 
