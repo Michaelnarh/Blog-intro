@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css " type="text/css">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="{{asset('/fontawesome/css/all.css')}}">
+	{{-- <link rel="stylesheet" href="{{asset('css/fontawesome/css/all.css')}}"> --}}
 	@stack('stylesheet')
 	<link href="{{asset("css/font-awesome.min.css")}}" rel="stylesheet">
 	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">

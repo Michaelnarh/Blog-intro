@@ -1,51 +1,70 @@
 @extends('layouts.master')
-@section('title',"| Blog")
+@section("title","| index")
 @section('content')
-
+<div class="container margin-limit">
+    @include('_partials.sessionmsg')
+</div>
 
 <div class="container">
-    <div class="row">
-        @foreach ($blogs as $blog)
-        <div class="col-md-8">
+    <h4 class="text-center text-success text-2">Our Blog</h4>
 
-            <div class="card">
-                <div class="d-flex">
-                    <ul>
-                        <img src="{{asset("image/".$blog->image)}}" alt="">
-                    </ul>
-                    <ul>
-                        <div class="card bg dark text-white">
-                            {{$blog->body}}
-                        </div>
-                    </ul>
-                    <strong>Posted By:</strong><span class="mr-2">{{$blog->name}}</span>
+    <div class="card p-4 mb-4">
+        @foreach ($blogs as $blog)
+
+        <h3 class="text-uppercase"> {{$blog->title}} </h3>
+        <div class="row my-2">
+            <div class="col-md-3">
+                <div class="img-container">
+                    <img src="{{asset("images/" . $blog->image)}}" alt="user" class="image-fluid" height="200"
+                        width="200">
                 </div>
             </div>
-             
+            <div class="col-md-9">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        {!!$blog->body!!}
+                    </div>
+
+                </div>
+                <h6 class="text-mutted mt-2">
+                    <strong>Posted By:</strong> {{$blog->name}}
+                </h6>
+                <span class="text-mutted text-1">{{$blog->created_at}}</span>
+                <ul>
+                    <ul Clickable="true" onclick="func()"> <i class="fas fa-2x fa-close"></i> </ul>
+                    <span id="count" class="fab">0</span>
+                    {{-- <span class="fab fa-2x fa-twitter"></span> --}}
+
+                </ul>
+                <ul>
+
+                </ul>
+            </div>
         </div>
+        <hr />
         @endforeach
-        <div class="col-md-4">
-
-        </div>
     </div>
-</div>
-<div class="mt-5 py-3 margin-limit">
 
-    em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-</div>
-<div class="mt-5 py-3 card">
-    em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-</div>
-<div class="mt-5 py-3 card">
-    em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    <ul class="justify-content-end">
+        {{$blogs->links()}}
+    </ul>
 </div>
 @endsection
+@push('script')
+<script>
+    $(document).ready(function(){
+        $("#count").innerHTML="jdkjl";
+       $(".fas").click(function(){
+           $("#count").innerHTML ="VAR";
+        //   alert("hello");
+       });
+   });
+</script>
+<script>
+    func=()=>{
+        alert("helloooooo");
+var select = document.getElementById('.fab');
+select.innerHTML="SELECTED";
+  }
+</script>
+@endpush

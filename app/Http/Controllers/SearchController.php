@@ -24,16 +24,17 @@ class SearchController extends Controller
 
                 //     //  $arr[$var] =$blog;
                 //  }
-                  return $blog;
+                $search_blog=$blog;
+                Session::flash("success","name found");
+                return view("blogs.search")->withBlog($search_blog);
+                
             }
             
             $var++;
         }
         
-        return $blog::all();
+        // return $blog::all();
 
-        Session::flash("success","name found");
-        return view("blogs.search")->withBlog($search_blogs);
     }
     
     // else{

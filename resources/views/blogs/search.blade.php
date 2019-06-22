@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section("title","| index")
+@section("title","| Search")
 @section('content')
 <div class="container margin-limit">
     @include('_partials.sessionmsg')
@@ -12,12 +12,12 @@
             <thead>Searched Name</thead>
         </div>
         <tr>
-            <th class="mr-2"> #</th>
-            <th class="mr-2"> name</th>
-            <th class="mr-2"> title</th>
-            <th class="mr-2"> body</th>
-            <th class="mr-2">image</th>
-            <th class="mr-2"></th>
+            <th class="text-3"> #</th>
+            <th class="text-3"> name</th>
+            <th class="text-3"> title</th>
+            <th class="text-3"> body</th>
+            <th class="text-3">image</th>
+            <th class="text-3"></th>
         </tr>
 
         <tr>
@@ -61,6 +61,8 @@
           $(".delete").click(function(){
              alert("Are you sure you want to delete");
           });
+
+        
       });
 
   $

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
-// use Image;
+use Image;
+use Purifier;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -18,7 +19,7 @@ class BlogController extends Controller
     public function index()
     {
         //
-        $blogs=Blog::orderBy("id","desc")->paginate(10);
+        $blogs=Blog::orderBy("id","desc")->paginate(8);
         return view("blogs.index",compact("blogs"));
     }
 
@@ -57,14 +58,14 @@ class BlogController extends Controller
         
         $blog -> name   =   $request-> name;
         $blog -> title  =   $request-> title;
-        $blog -> body   =   Purifi$request-> body;
         {
             $image      =  $request-> image;
             $image_name = time() . ".".$image->getClientOriginalExtension();
             $location   = public_path("images/".$image_name);
-            save($location);
+            
             Image::make($image)->resize(550,550)->save($location);
             $blog -> image = $image_name;
+            $blog -> body   = $request-> body;
         }
 
         //save new blog
